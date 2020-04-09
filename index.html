@@ -4,18 +4,27 @@
 <meta charset="UTF-8">
 <title>Tu info</title>
 </head>
-<body>
+<body bgcolor="gray">
 	
+	<center><h1>Actualiza tus datos</h1></center>
+<img src="imagenes\monge.jpg" height="20%" width="20%" >
 	<form action="bdinfo.php" method="post">
-		<img src="imagenes\monge.jpg" height="20%" width="20%" >
-		<p>Agente:<input type="text" name="agente" placeholder="agente">
-			Agente:<input type="text" name="agente" placeholder="agente"></p></p>
-		<p>Nombres:<input type="text" name="nombres" placeholder="nombres"></p>
-		<p>Apellidos:<input type="text" name="apellido" placeholder="apellidos"></p>
-		<p>Cod empleado:<input type="text" name="cod" placeholder="codigo de empleado"></p>
+
+<div id="registro">
+	<table>
+		<tr>
+		<td><label for="usuario">Agente:</label><input type="text" name="agentebdinfo" id="usuario" placeholder="agente">
+			<label for="codigo"> codigo: </label><input type="text" name="codigobdinfo" id="codigo" 	placeholder="codigo"></table>
+			</td>
+		<td><label for="nombre"> Nombres:<input type="text" name="nombrebdinfo" id="nombre" placeholder="nombres">
+		</td>
+		<td><label for="apellido" >Apellidos:<input type="text" name="apellidobdinfo" id="apellido" placeholder="apellidos">
+		</td>	
+		<td>Cod empleado:<input type="text" name="cod" placeholder="codigo de empleado"></td>
 		<p><input type="submit" value="Guardar">
 		<input type="submit" value="Modificar"></p>
+	</table>
 	</form>
+	</div>
 </body>
 </html>
-
