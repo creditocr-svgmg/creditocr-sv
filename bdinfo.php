@@ -1,14 +1,16 @@
-<?php
+<?php<?php
+ 
 $servidor ="localhost";
 $usuario ="root";
 $contraseña="";
 $baseDeDatos ="bdinfo";
 
-$enlace =mysqli_pconnect($servidor, $usuario, $contraseña, $baseDeDatos);
+$enlace =mysqli_connect($servidor, $usuario, $contraseña, $baseDeDatos);
 if(!$enlace){
 
 	echo "Error en  la conexion con el servidor";
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -21,7 +23,7 @@ if(!$enlace){
 	
 	<center><h1>Actualiza tus datos</h1></center>
 <img src="imagenes\monge.jpg" height="20%" width="20%" >
-	<form action="bdinfo.php" method="POST">
+	<form action="formulario.php" method="POST">
 
 <div id="registro">
 	<table>
@@ -50,12 +52,17 @@ if(!$enlace){
 </html>
 
 <?php 
-if (isset($_POST['guardar'])) {
+$agente = $_Post [ 'agentebdinfo' ];
+$codigo = $_Post [ 'codbdinfo' ];
+$nombre = $_Post [ 'nombrebdinfo' ];
+$apellido = $_Post [ 'apellidobdinfo' ];
+
+if(isset($_POST['guardar'])) {
 
 $insertarDatos ="INSERT INTO bdinfo VALUES ($agente', 
 											'$codigo', 
 											'$nombre', 
-											'$apellido')":
+											'$apellido')";
 $ejecutarinsertar=mysqli_query($enlace, $insertarDatos);
 
 if ($ejecutarinsertar) {
